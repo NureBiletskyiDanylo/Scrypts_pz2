@@ -17,7 +17,7 @@ if (!isset($_SESSION['counted']))
         $user = "HI";
     }
 
-    $entry_line = "$dtime-IP: $ip | Agent: $agent | URL: $uri | Referer: $ref | Username: $user n";
+    $entry_line = "$dtime-IP: $ip | Agent: $agent | URL: $uri | Referer: $ref | Username: $user \n";
     $fp = fopen("logs.txt", "a");
     fputs($fp, $entry_line);
     fclose($fp);
